@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .reading {
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+
+        .reading h2 {
+            margin-top: 0;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .reading p {
+            margin: 0;
+            font-size: 18px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="reading" id="speedometer">
+            <h2>Speed</h2>
+            <p>Loading...</p>
+        </div>
+        <div class="reading" id="temperature">
+            <h2>Temperature</h2>
+            <p>Loading...</p>
+        </div>
+        <div class="reading" id="odometer">
+            <h2>Odometer</h2>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <!-- <script>
+        function fetchDataAndUpdateUI() {
+            fetch('your_api_endpoint_here')
+                .then(response => response.json())
+                .then(data => {
+                    updateUI('speedometer', `Speed: ${data.speed}`);
+                    updateUI('temperature', `Temperature: ${data.temperature}`);
+                    updateUI('odometer', `Odometer: ${data.odometer}`);
+                })
+                .catch(error => console.error('Error fetching data:', error));
+        }
+
+        function updateUI(elementId, content) {
+            document.getElementById(elementId).innerHTML = content;
+        }
+
+        // Initial call
+        fetchDataAndUpdateUI();
+
+        // Call fetchDataAndUpdateUI every second
+        setInterval(fetchDataAndUpdateUI, 1000);
+    </script> -->
+</body>
+</html>
